@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  */
 public class StringUtil {
 
-	private static final Pattern ALPHA_NUMERIC_PATTERN = Pattern.compile("[0-9A-Za-z]");
+	private static final Pattern ALPHA_NUMERIC_PATTERN = Pattern.compile("[0-9A-Za-z]+");
 	
 	public static String innerTrim(String s) {
 		return removeDuplicates(s, ' ');

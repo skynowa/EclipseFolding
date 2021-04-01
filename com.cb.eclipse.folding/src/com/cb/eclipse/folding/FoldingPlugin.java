@@ -13,19 +13,20 @@ package com.cb.eclipse.folding;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
-import org.eclipse.core.runtime.IPluginDescriptor;
-import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.osgi.framework.BundleContext;
-
 import com.cb.eclipse.folding.java.JavaSettings;
 import com.cb.eclipse.folding.java.preferences.Defaults;
 import com.cb.eclipse.folding.theme.Images;
 
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.osgi.framework.BundleContext;
+
 /**
  * The main plugin class for the FoldingPlugin.
  */
-public class FoldingPlugin extends AbstractUIPlugin {
+public class FoldingPlugin extends AbstractUIPlugin  implements IPropertyChangeListener {
 
 	// The shared instance.
 	private static FoldingPlugin plugin;
@@ -41,8 +42,8 @@ public class FoldingPlugin extends AbstractUIPlugin {
 	/**
 	 * The constructor.
 	 */
-	public FoldingPlugin(IPluginDescriptor desc) {
-		super(desc);
+	public FoldingPlugin() {
+		super();
 		try {
 			
 			plugin = this;
@@ -137,5 +138,11 @@ public class FoldingPlugin extends AbstractUIPlugin {
 		}
 		
 		return resourceBundle;
+	}
+
+	@Override
+	public void propertyChange(PropertyChangeEvent event) {
+		// TODO Auto-generated method stub
+		
 	}
 }

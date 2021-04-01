@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Coffee Bytes Folding Plug-in
 Bundle-SymbolicName: com.cb.eclipse.folding;singleton:=true
-Bundle-Version: 1.0.5.a
-Bundle-Activator: com.cb.eclipse.folding.Activator
+Bundle-Version: 1.0.6
+Bundle-Activator: com.cb.eclipse.folding.FoldingPlugin
 Bundle-ClassPath: .
 Bundle-Vendor: Coffee Bytes
 Require-Bundle: org.eclipse.core.runtime,
@@ -15,6 +15,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jdt.core,
  org.eclipse.jdt.ui
 Eclipse-AutoStart: true
-Plugin-Class: com.cb.eclipse.folding.FoldingPlugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
